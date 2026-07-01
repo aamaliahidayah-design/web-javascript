@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>belajar Java Script</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kalkulator-container">
+    <h2>Kalkulator Wisata</h2>
+    <form id="form-kalkulator">
+        <label for="jumlah-orang">Jumlah Rombongan (Orang):</label>
+        <input type="number" id="jumlah-orang" min="1" required>
+
+        <label for="lama-hari">Lama Menginap (Hari):</label>
+        <input type="number" id="lama-hari" min="1" required>
+
+        <label for="paket-wisata">Pilihan Paket:</label>
+        <select id="paket-wisata" required>
+            <option value="">-- Pilih Paket --</option>
+            <option value="500000">Paket Hemat (Rp 500.000/hari/orang)</option>
+            <option value="900000">Paket Premium (Rp 900.000/hari/orang)</option>
+        </select>
+        <label>Layanan Tambahan:</label>
+
+<p>
+    <input type="checkbox" id="asuransi">
+    Asuransi Perjalanan (+Rp50.000/orang)
+</p>
+
+<p>
+    <input type="checkbox" id="foto">
+    Fotografer (+Rp300.000/hari)
+</p>
+
+<label for="promo">Kode Promo:</label>
+<input type="text" id="promo" placeholder="Masukkan kode promo">
+
+        <button type="submit">Hitung Estimasi</button>
+    </form>
+
+    <div id="hasil-kalkulasi" class="hidden">
+        <h3>Rincian Biaya:</h3>
+        <p id="teks-rincian"></p>
+        <h4 id="teks-total"></h4>
+    </div>
+</div>
+<script src="script.js"></script>    
+</body>
+</html>
+
